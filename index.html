@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CORAL GUARDIAN, media pembelajaran interaktif tentang pemutihan terumbu karang dengan model Fogarty Webbed.">
+  <title>CORAL GUARDIAN | Ocean Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a class="logo" href="#" onclick="showPage(0)">🪸 CORAL GUARDIAN</a>
+  <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+  <nav id="navMenu">
+    <a href="#" onclick="showPage(0)">Beranda</a>
+    <a href="#" onclick="showPage(1)">Misi</a>
+    <a href="#" onclick="showPage(2)">Webbed</a>
+    <a href="#" onclick="showPage(3)">Investigasi</a>
+    <a href="#" onclick="showPage(4)">Tantangan</a>
+    <a href="#" onclick="showPage(5)">Kuis</a>
+    <a href="#" onclick="showPage(6)">Refleksi</a>
+  </nav>
+
+  <button class="sound-button" id="soundButton" onclick="toggleOceanSound()">
+    🔊 Aktifkan Suara Laut
+  </button>
+</header>
+
+<main>
+
+  <!-- HALAMAN 1: BERANDA -->
+  <section class="page active" id="home">
+    <div class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">OCEAN LEARNING JOURNEY</span>
+        <h1>THE MYSTERY OF <span>CORAL BLEACHING</span></h1>
+        <p>
+          Satu fenomena di lautan, empat sudut pandang ilmu pengetahuan,
+          dan satu misi untuk menyelamatkan terumbu karang.
+        </p>
+        <button onclick="nextPage()">Mulai Petualangan →</button>
+        <div class="hero-tags">
+          <span>🌊 Explore</span>
+          <span>🔬 Discover</span>
+          <span>🪸 Protect</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="welcome">
+      <h2>Selamat Datang, Ocean Guardian!</h2>
+      <p>
+        Jelajahi misteri pemutihan terumbu karang melalui pembelajaran
+        yang menghubungkan Biologi, Fisika, Kimia, dan Geografi.
+      </p>
+    </div>
+  </section>
+
+  <!-- HALAMAN 2: MISTERI CORAL BLEACHING -->
+  <section class="page" id="mission">
+    <div class="section-heading">
+      <span class="eyebrow">MISSION 01</span>
+      <h2>Misteri di Balik Laut yang Memutih</h2>
+      <p>Mengapa terumbu karang yang indah dapat berubah menjadi putih?</p>
+    </div>
+
+    <div class="gallery">
+      <article class="photo-card">
+        <img
+          src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1000&q=85"
+          alt="Pemandangan terumbu karang bawah laut">
+        <div class="photo-caption">
+          <h3>Ekosistem Terumbu Karang</h3>
+          <p>Habitat berbagai organisme laut.</p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img
+          src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1000&q=85"
+          alt="Kehidupan bawah laut">
+        <div class="photo-caption">
+          <h3>Kehidupan Bawah Laut</h3>
+          <p>Ekosistem yang perlu kita lindungi.</p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img
+          src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=1000&q=85"
+          alt="Terumbu karang dan ikan">
+        <div class="photo-caption">
+          <h3>Keanekaragaman Hayati</h3>
+          <p>Terumbu karang mendukung kehidupan laut.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="content-card">
+      <h3>🔎 Apa itu Coral Bleaching?</h3>
+      <p>
+        Pemutihan terumbu karang atau coral bleaching adalah kondisi
+        ketika karang kehilangan banyak alga simbion yang hidup di
+        dalam jaringannya. Jaringan karang menjadi transparan sehingga
+        rangka putihnya terlihat.
+      </p>
+      <p>
+        Salah satu pemicu utamanya adalah suhu air laut yang terlalu
+        tinggi dalam jangka waktu tertentu. Karang yang memutih belum
+        tentu mati dan sebagian masih dapat pulih.
+      </p>
+    </div>
+
+    <div class="video-card">
+      <span class="eyebrow">VIDEO EXPLORATION</span>
+      <h3>🎬 What is Coral Bleaching?</h3>
+      <p>
+        Saksikan video edukasi berikut untuk memahami bagaimana
+        kenaikan suhu laut dapat menyebabkan pemutihan karang.
+      </p>
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/ELBrybrYrGo"
+          title="What is Coral Bleaching - Great Barrier Reef Foundation"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <small>Video: Great Barrier Reef Foundation</small>
+    </div>
+
+    <div class="fact-card">
+      <span>💡</span>
+      <div>
+        <h3>Tahukah Kamu?</h3>
+        <p>
+          Jika tekanan panas berkurang, karang yang mengalami pemutihan
+          masih memiliki peluang untuk mendapatkan kembali alga
+          simbionnya dan pulih.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HALAMAN 3: FOGARTY WEBBED -->
+  <section class="page" id="webbed">
+    <div class="section-heading">
+      <span class="eyebrow">MISSION 02</span>
+      <h2>Satu Fenomena, Empat Jaring Ilmu</h2>
+      <p>
+        Klik setiap bidang ilmu untuk melihat hubungannya dengan
+        pemutihan terumbu karang.
+      </p>
+    </div>
+
+    <div class="webbed-layout">
+      <div class="webbed-center">
+        <span>🪸</span>
+        <strong>PEMUTIHAN<br>TERUMBU KARANG</strong>
+        <small>Tema utama</small>
+      </div>
+
+      <button class="discipline biology" onclick="openMaterial('biologi')">
+        <span>🧬</span>
+        <strong>BIOLOGI</strong>
+        <small>Organisme dan simbiosis</small>
+      </button>
+
+      <button class="discipline physics" onclick="openMaterial('fisika')">
+        <span>🌡️</span>
+        <strong>FISIKA</strong>
+        <small>Suhu dan kalor</small>
+      </button>
+
+      <button class="discipline chemistry" onclick="openMaterial('kimia')">
+        <span>⚗️</span>
+        <strong>KIMIA</strong>
+        <small>CO₂ dan pengasaman laut</small>
+      </button>
+
+      <button class="discipline geography" onclick="openMaterial('geografi')">
+        <span>🌏</span>
+        <strong>GEOGRAFI</strong>
+        <small>Persebaran terumbu karang</small>
+      </button>
+    </div>
+
+    <div class="material-box" id="materialBox" aria-live="polite">
+      <h3>🌊 Pilih bidang ilmu</h3>
+      <p>
+        Tekan salah satu bidang ilmu di atas untuk membuka materi.
+      </p>
+    </div>
+
+    <div class="content-card">
+      <h3>🔗 Mengapa Keempat Ilmu Ini Terhubung?</h3>
+      <p>
+        Perubahan suhu laut dapat memberikan tekanan termal pada karang.
+        Kondisi ini berkaitan dengan respons biologis karang dan alga
+        simbionnya. Di sisi lain, perubahan kimia air laut seperti
+        pengasaman laut juga dapat menjadi tekanan tambahan. Geografi
+        membantu kita memahami persebaran dan kondisi terumbu karang
+        di berbagai wilayah.
+      </p>
+    </div>
+  </section>
+
+  <!-- HALAMAN 4: INVESTIGASI -->
+  <section class="page" id="investigation">
+    <div class="section-heading">
+      <span class="eyebrow">MISSION 03</span>
+      <h2>Investigasi Perubahan Suhu Laut</h2>
+      <p>Amati data ilustrasi berikut dan lakukan analisis.</p>
+    </div>
+
+    <div class="temperature-grid">
+      <div class="temperature-card">
+        <small>MINGGU 1</small>
+        <strong>28°C</strong>
+        <span>Suhu awal</span>
+      </div>
+      <div class="temperature-card">
+        <small>MINGGU 2</small>
+        <strong>28,5°C</strong>
+        <span>Mulai meningkat</span>
+      </div>
+      <div class="temperature-card">
+        <small>MINGGU 3</small>
+        <strong>29°C</strong>
+        <span>Terus meningkat</span>
+      </div>
+      <div class="temperature-card">
+        <small>MINGGU 4</small>
+        <strong>30°C</strong>
+        <span>Suhu tertinggi</span>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h3>📊 Analisis Data</h3>
+      <p>
+        Data ilustrasi menunjukkan suhu air laut meningkat dari 28°C
+        menjadi 30°C. Perubahan suhu tersebut adalah 2°C.
+      </p>
+      <p>
+        Data ini hanya untuk latihan pembelajaran, bukan hasil
+        pengukuran lapangan atau batas universal terjadinya bleaching.
+      </p>
+    </div>
+
+    <div class="activity-card">
+      <h3>🧠 Pertanyaan Investigasi</h3>
+      <ol>
+        <li>Berapa besar perubahan suhu dari minggu pertama hingga minggu keempat?</li>
+        <li>Mengapa peningkatan suhu laut dalam waktu lama dapat membahayakan karang?</li>
+        <li>Bagaimana hubungan suhu laut dengan pemutihan terumbu karang?</li>
+      </ol>
+      <textarea id="investigationAnswer"
+        placeholder="Tuliskan hasil pengamatan dan analisismu..."></textarea>
+      <button onclick="submitInvestigation()">Kirim Jawaban</button>
+      <p id="investigationFeedback" class="feedback"></p>
+    </div>
+  </section>
+
+  <!-- HALAMAN 5: TANTANGAN -->
+  <section class="page" id="challenge">
+    <div class="section-heading">
+      <span class="eyebrow">MISSION 04</span>
+      <h2>Eco Challenge: Selamatkan Terumbu Karang!</h2>
+      <p>Saatnya menjadi tim penjaga ekosistem laut.</p>
+    </div>
+
+    <div class="challenge-grid">
+      <article class="challenge-card">
+        <span>🔎</span>
+        <h3>1. Selidiki</h3>
+        <p>Identifikasi penyebab pemutihan karang dari empat bidang ilmu.</p>
+      </article>
+      <article class="challenge-card">
+        <span>💡</span>
+        <h3>2. Rancang Solusi</h3>
+        <p>Buat poster atau infografis tentang perlindungan terumbu karang.</p>
+      </article>
+      <article class="challenge-card">
+        <span>📣</span>
+        <h3>3. Presentasikan</h3>
+        <p>Jelaskan hasil penyelidikan dan solusi kelompok di depan kelas.</p>
+      </article>
+    </div>
+
+    <div class="content-card campaign">
+      <h3>🏆 Tantangan Kelompok</h3>
+      <h2>JAGA LAUT, SELAMATKAN TERUMBU KARANG!</h2>
+      <p>
+        Buatlah kampanye sederhana dalam bentuk poster digital,
+        infografis, atau video singkat yang mengajak masyarakat
+        menjaga ekosistem laut.
+      </p>
+    </div>
+  </section>
+
+  <!-- HALAMAN 6: KUIS -->
+  <section class="page" id="quizPage">
+    <div class="section-heading">
+      <span class="eyebrow">MISSION 05</span>
+      <h2>Ocean Quiz Challenge</h2>
+      <p>Uji pemahamanmu melalui lima pertanyaan.</p>
+    </div>
+
+    <div class="quiz-card" id="quizContainer">
+      <div class="quiz-top">
+        <span id="questionNumber">Pertanyaan 1 dari 5</span>
+        <span id="quizScore">Skor: 0</span>
+      </div>
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+      <h3 id="questionText"></h3>
+      <div id="answerOptions"></div>
+      <p id="quizFeedback" class="feedback"></p>
+      <button id="nextQuestionButton" onclick="nextQuestion()">Berikutnya →</button>
+    </div>
+
+    <div id="quizResult" class="quiz-result hidden">
+      <span>🏆</span>
+      <h2>Kuis Selesai!</h2>
+      <h3 id="finalScore"></h3>
+      <p id="scoreMessage"></p>
+      <button onclick="restartQuiz()">Ulangi Kuis</button>
+    </div>
+  </section>
+
+  <!-- HALAMAN 7: REFLEKSI -->
+  <section class="page" id="reflection">
+    <div class="section-heading">
+      <span class="eyebrow">FINAL MISSION</span>
+      <h2>Jadilah Ocean Guardian!</h2>
+      <p>Pengetahuan adalah awal dari tindakan nyata.</p>
+    </div>
+
+    <div class="reflection-card">
+      <span class="big-icon">🌊</span>
+      <h3>Refleksi Pembelajaran</h3>
+      <p>Apa hal paling penting yang kamu pelajari hari ini?</p>
+      <textarea id="reflectionAnswer"
+        placeholder="Hari ini saya belajar bahwa..."></textarea>
+
+      <label class="pledge">
+        <input type="checkbox" id="pledgeCheck">
+        Saya berkomitmen ikut menjaga lingkungan laut.
+      </label>
+
+      <button onclick="finishMission()">Selesaikan Misi ✨</button>
+      <h3 id="finishMessage" class="feedback"></h3>
+    </div>
+
+    <div class="final-message">
+      <h2>THANK YOU, OCEAN GUARDIAN!</h2>
+      <p>Laut yang sehat adalah masa depan kehidupan.</p>
+      <span>🪸 🌊 🐢 🐠</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-footer">
+  <button id="prevButton" onclick="prevPage()">← Sebelumnya</button>
+  <span id="pageNumber">01 / 07</span>
+  <button id="nextButton" onclick="nextPage()">Selanjutnya →</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
